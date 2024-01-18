@@ -33,42 +33,33 @@ For gradient descent:
 For simplex method:
     Goal was to maximize z = x + 2y
     subject to
-        • 2x + y ≤ 10
-        • -4x + 5y ≤ 8
-        • x - 2y ≤ 3
-        • x, y ≥ 0
+    • 2x + y ≤ 10
+    • -4x + 5y ≤ 8
+    • x - 2y ≤ 3
+    • x, y ≥ 0
 
-    Which can be rewritten as:
+Which can be rewritten as:
 
-    maximize z = cT·x
-    subject to
-        • Ax ≤ b
-        • x ≥ 0
+maximize   z = cT·x
+subject to
+      • Ax ≤ b
+      • x ≥ 0
 
-    z is called the objective function, A a coefficients matrix, and b the non-negative constraints. The space defined by the constraints equations is called the feasible region.
-    This is a convex polytope. It can be shown that so solutions which maximizes the objective function are located on the vertices of this polytope.
+z is called the objective function, A a coefficients matrix, and b the non-negative constraints. The space defined by the constraints equations is called the feasible region.
+This is a convex polytope. It can be shown that so solutions which maximizes the objective function are located on the vertices of this polytope.
 
-    First, numpy arrays for A, b and c were initialized:
-        A = np.array([[2,1],[-4,5],[1,-2]]) where matrix [x,y] of each function f(x) 10 = 2x + y | f(y) 8 = -4x + 5y | f(z) 3 = x - 2y
-        b = np.array([10,8,3]) where vectors are function values
-        c = np.array([-1,-2]) vector coefficients
-    Second, using scikit library and its linprog module a function was create that would take in c, A, b and solve the linear problem.
-        def solve_linear_problem(A, b, c):
-            result = linprog(c, A_ub=A, b_ub=b, method='highs')
-        As simplex is depreciated, 'highs' was used instead.
-    Using the function optimal value and optimal arguments were found.
+On the picture, we can visualize the feasible region in beige in the middle. The red line represents the function 2x +y = 10, the white one -4x +5y = 8 and blue one represents
+the function x - 2y = 3. The area inside the orange polytope is the intersection between all the constraints inequalities.
 
 
 ## Installation
-Clone the repository and run the provided ipython scripts. Ensure you have the necessary dependencies installed.
-Libraries used: 
-
-import matplotlib.pyplot as plt
-import numpy as np
-from scipy.optimize import minimize_scalar, linprog
+TODO - How to install your project? npm install? make? make re?
 
 ## Usage
-Run cells in Jupyter respective cells in Jupyter notebooks.
+TODO - How does it work?
+```
+./my_project argument1 argument2
+```
 
 ### The Core Team
 Project completed by Nikita Gaidamachenko
