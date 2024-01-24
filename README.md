@@ -53,13 +53,12 @@ the function x - 2y = 3. The area inside the orange polytope is the intersection
 
 
 ## Installation
-TODO - How to install your project? npm install? make? make re?
+Install next libraries: 
+- matplotlib
+- numpy
 
 ## Usage
-TODO - How does it work?
-```
-./my_project argument1 argument2
-```
+Download the Jupyter Notebook, run cells. You can indicate your f prime by defining f as the equation. 
 
 ### The Core Team
 Project completed by Nikita Gaidamachenko
